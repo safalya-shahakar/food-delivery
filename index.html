@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Shahakar Food</h1>
+    <p>Order your favorite dishes now!</p>
+  </header>
+
+  <main>
+    <div class="menu">
+      <div class="dish">
+        <h2>Chicken Dum Biryani</h2>
+        <p>Aromatic, flavorful, and packed with spices, every bite of this Chicken Dum Biryani is a journey of taste and tradition. The tender, slow-cooked chicken is layered with perfectly spiced basmati rice to create a dish that’s irresistible. Served with complimentary buttermilk and fresh salad to complete your meal.</p>
+        <img src="images/chicken_biryani.jpg" alt="Chicken Dum Biryani">
+        <button onclick="placeOrder('Chicken Dum Biryani')">Order Now</button>
+      </div>
+      <div class="dish">
+        <h2>Chicken Masala</h2>
+        <p>A rich, spicy, and hearty dish crafted with tender chicken pieces simmered in a flavorful, creamy gravy. Infused with aromatic spices, this Chicken Masala pairs perfectly with naan or steamed rice. A delightful choice for spice lovers!</p>
+        <img src="images/chicken_masala.jpg" alt="Chicken Masala">
+        <button onclick="placeOrder('Chicken Masala')">Order Now</button>
+      </div>
+      <div class="dish">
+       
+        <h2>Mutton Masala</h2>
+        <p>Indulge in the bold and robust flavors of Mutton Masala, where succulent pieces of mutton are cooked to perfection in a thick, spiced gravy. The rich blend of traditional spices and tender meat promises a comforting and satisfying meal.</p>
+        <img src="images/mutton_masala.jpg" alt="Mutton Masala">
+        <button onclick="placeOrder('Mutton Masala')">Order Now</button>
+      </div>
+      <div class="dish">
+        <img src="images/mutton_biryani.jpg" alt="Mutton Biryani">
+        <h2>Mutton Biryani</h2>
+        <p>Experience the royal taste of Mutton Biryani—juicy, tender pieces of mutton layered with fragrant basmati rice and cooked with a medley of spices. Perfect for special occasions or anytime you crave something extraordinary. Served with complimentary buttermilk and fresh salad for a complete dining experience.</p>
+        <img src="images/mutton_biryani.jpg" alt="Mutton Biryani">
+        <button onclick="placeOrder('Mutton Biryani')">Order Now</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shahakar Food</p>
+  </footer>
+
+  <script>
+    function placeOrder(dish) {
+      const message = `Hi, I'd like to order ${dish}.`;
+      const encodedMessage = encodeURIComponent(message);
+      const phoneNumber = "7219643117"; // Replace with your phone number
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+    }
+  </script>
+</body>
+</html>
